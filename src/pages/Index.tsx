@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { GameHeader } from "@/components/GameHeader";
 import { ResourceBar } from "@/components/ResourceBar";
 import { NavigationTabs } from "@/components/NavigationTabs";
 import { CastleView } from "@/components/CastleView";
@@ -7,6 +6,7 @@ import { ArmyView } from "@/components/ArmyView";
 import { MapView } from "@/components/MapView";
 import { AllianceView } from "@/components/AllianceView";
 import { useToast } from "@/hooks/use-toast";
+import { Castle, Sword, Map, Users } from "lucide-react";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("castle");
@@ -19,11 +19,11 @@ const Index = () => {
     alliance: "Knights of Valor"
   };
 
-  const resources = [
-    { type: 'wood' as const, current: 12500, max: 25000, production: 450 },
-    { type: 'stone' as const, current: 8200, max: 20000, production: 320 },
-    { type: 'iron' as const, current: 5100, max: 15000, production: 180 },
-    { type: 'food' as const, current: 18700, max: 30000, production: 680 },
+  const mockResources = [
+    { type: "Wood", amount: 1250, production: 45, icon: "🌲", color: "#8B4513" },
+    { type: "Stone", amount: 890, production: 35, icon: "🏔️", color: "#708090" },
+    { type: "Iron", amount: 340, production: 25, icon: "⛏️", color: "#4682B4" },
+    { type: "Food", amount: 2100, production: 60, icon: "🍎", color: "#228B22" },
   ];
 
   const buildings = [
@@ -260,21 +260,19 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      <GameHeader
-        playerName={playerData.name}
-        level={playerData.level}
-        alliance={playerData.alliance}
+      <ResourceBar 
+        resources={mockResources} 
+        playerName="Lord Commander" 
+        playerLevel={15}
+      />
+      <NavigationTabs 
+        activeTab={activeTab} 
+        onTabChange={setActiveTab}
       />
       
-      <div className="p-4">
-        <ResourceBar resources={resources} />
-      </div>
-
-      <main className="flex-1 overflow-auto">
+      <main className="flex-1 overflow-hidden">
         {renderActiveView()}
       </main>
-
-      <NavigationTabs activeTab={activeTab} onTabChange={setActiveTab} />
     </div>
   );
 };

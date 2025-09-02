@@ -8,57 +8,60 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Medieval Fantasy Theme */
-    --background: 218 23% 8%;
-    --foreground: 45 89% 85%;
-
-    --card: 220 26% 12%;
-    --card-foreground: 45 89% 85%;
-
-    --popover: 220 26% 12%;
-    --popover-foreground: 45 89% 85%;
-
-    --primary: 214 100% 45%;
+    /* Lords & Knights Light Theme */
+    --background: 45 15% 92%;
+    --foreground: 220 15% 15%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+    
+    --primary: 210 85% 45%;
     --primary-foreground: 0 0% 100%;
-
-    --secondary: 38 75% 55%;
-    --secondary-foreground: 220 26% 12%;
-
-    --muted: 217 19% 18%;
-    --muted-foreground: 215 20% 65%;
-
-    --accent: 142 76% 36%;
+    
+    --secondary: 30 35% 55%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 45 15% 85%;
+    --muted-foreground: 220 15% 45%;
+    
+    --accent: 120 35% 45%;
     --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 72% 51%;
+    
+    --destructive: 0 65% 55%;
     --destructive-foreground: 0 0% 100%;
-
-    --border: 217 19% 18%;
-    --input: 217 19% 18%;
-    --ring: 214 100% 45%;
-
-    --radius: 0.75rem;
-
-    /* Game-specific colors */
-    --resource-wood: 30 40% 45%;
-    --resource-stone: 220 14% 55%;
-    --resource-iron: 210 15% 40%;
-    --resource-food: 60 60% 50%;
     
-    /* Medieval gradients */
-    --gradient-royal: linear-gradient(135deg, hsl(214 100% 45%), hsl(260 100% 60%));
-    --gradient-gold: linear-gradient(135deg, hsl(38 75% 55%), hsl(45 89% 75%));
-    --gradient-forest: linear-gradient(135deg, hsl(142 76% 36%), hsl(120 60% 40%));
-    --gradient-stone: linear-gradient(135deg, hsl(220 14% 55%), hsl(215 20% 65%));
+    --border: 45 15% 80%;
+    --input: 0 0% 100%;
+    --ring: 210 85% 45%;
     
-    /* Shadows and effects */
-    --shadow-medieval: 0 10px 30px -10px hsl(214 100% 45% / 0.3);
-    --shadow-card: 0 4px 20px -4px hsl(220 26% 4% / 0.4);
-    --glow-primary: 0 0 20px hsl(214 100% 45% / 0.5);
+    --radius: 0.5rem;
+    
+    /* Lords & Knights specific colors */
+    --game-green: 120 45% 35%;
+    --game-blue: 210 85% 45%;
+    --game-brown: 30 35% 35%;
+    --game-gold: 45 85% 55%;
+    --terrain-grass: 120 25% 45%;
+    --terrain-water: 210 75% 55%;
+    --terrain-forest: 120 45% 25%;
+    --terrain-mountain: 0 0% 55%;
+    
+    /* Gradients - Lords & Knights style */
+    --gradient-royal: linear-gradient(135deg, hsl(var(--game-blue)), hsl(210 85% 35%));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--game-gold)), hsl(45 85% 45%));
+    --gradient-forest: linear-gradient(135deg, hsl(var(--game-green)), hsl(120 35% 25%));
+    --gradient-brown: linear-gradient(135deg, hsl(var(--game-brown)), hsl(30 35% 25%));
+    --gradient-terrain: linear-gradient(180deg, hsl(var(--terrain-grass)) 0%, hsl(120 35% 35%) 100%);
+    
+    /* Shadows */
+    --shadow-medieval: 0 4px 12px -4px hsl(0 0% 0% / 0.25);
+    --shadow-elevation: 0 2px 8px -2px hsl(0 0% 0% / 0.15);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
