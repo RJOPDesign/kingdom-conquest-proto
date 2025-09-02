@@ -61,7 +61,28 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				resources: {
+					wood: 'hsl(var(--resource-wood))',
+					stone: 'hsl(var(--resource-stone))',
+					iron: 'hsl(var(--resource-iron))',
+					food: 'hsl(var(--resource-food))'
 				}
+			},
+			backgroundImage: {
+				'gradient-royal': 'var(--gradient-royal)',
+				'gradient-gold': 'var(--gradient-gold)',
+				'gradient-forest': 'var(--gradient-forest)',
+				'gradient-stone': 'var(--gradient-stone)'
+			},
+			boxShadow: {
+				'medieval': 'var(--shadow-medieval)',
+				'card': 'var(--shadow-card)',
+				'glow': 'var(--glow-primary)'
+			},
+			transitionTimingFunction: {
+				'smooth': 'var(--transition-smooth)',
+				'bounce': 'var(--transition-bounce)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
